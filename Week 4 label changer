@@ -1,1 +1,32 @@
+from tkinter import *
 
+Main_window = Tk()
+
+my_text = "This is new"
+
+def counter():
+    global my_text
+
+    my_label.config(text=my_text)
+
+my_button = Button(Main_window,
+                   text="This is new",
+                   command=lambda:[counter, update(), test()])
+
+my_label = Label(Main_window,
+                 text="Change me")
+
+def update():
+   Label(Main_window,
+            text="This is new")
+
+def test():
+   if my_label == "This is new":
+      print("Your code worked correctly")
+   else:
+      print("Something went wrong...")
+
+my_label.pack()
+my_button.pack()
+
+Main_window.mainloop()
